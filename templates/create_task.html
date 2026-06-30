@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Login</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+    <h1>Create Task</h1>
+
+    <form method="POST">
+
+        <input type="text" name="title" placeholder="Task Title">
+        <br><br>
+
+        <input type="text" name="assigned_to" placeholder="Assigned To">
+        <br><br>
+
+        <select name="status">
+
+            <option>Pending</option>
+
+            <option>Completed</option>
+
+        </select>
+
+        <br><br>
+
+        <button type="submit">Create Task</button>
+
+    </form>
+
+</body>
+
+</html>

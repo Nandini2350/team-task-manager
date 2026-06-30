@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Login</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>Welcome to Dashboard</h1>
+<div>
+
+    <a href="/create-task">Create New Task</a>
+
+    <br><br>
+
+    <a href="/logout">Logout</a>
+
+</div>
+
+    <hr>
+
+    {% for task in tasks %}
+
+        <h3>Task: {{ task.title }}</h3>
+
+        <p>Assigned To: {{ task.assigned_to }}</p>
+
+        <p>Status: {{ task.status }}</p>
+
+        <a href="/update-task/{{ task.id }}">
+    Update Status
+</a>
+<br><br>
+
+<a href="/delete-task/{{ task.id }}">
+    Delete Task
+</a>
+
+
+        <hr>
+
+    {% endfor %}
+
+</body>
+
+</html>
